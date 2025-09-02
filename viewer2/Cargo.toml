@@ -31,3 +31,9 @@ url = "2.4.0"
 
 [dev-dependencies]
 tracing-test = "0.2.4"
+
+[profile.release]  # https://github.com/johnthagen/min-sized-rust
+strip = true
+opt-level = "s"
+lto = true
+codegen-units = 1
